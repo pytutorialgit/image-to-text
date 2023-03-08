@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Image to Text Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="header">Image to Text Result</h1>
+      {% if text %}
+      <div class="result">
+        <p>{{ text }}</p>
+      </div>
+      {% else %}
+      <div class="result">
+        <p>No text detected in the uploaded image.</p>
+      </div>
+      {% endif %}
+      <div class="form-group">
+        <a href="{{ url_for('home') }}" class="button">Upload Another Image</a>
+      </div>
+    </div>
+  </body>
+</html>

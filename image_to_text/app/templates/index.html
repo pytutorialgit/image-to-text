@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Upload Image</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="header">Upload Image</h1>
+      <form class="form" method="POST" action="{{ url_for('process_image') }}" enctype="multipart/form-data">
+        <div class="form-group">
+          <label for="image" class="label">Choose an image to upload:</label>
+          <input type="file" name="image" id="image" class="input">
+        </div>
+        <div class="form-group">
+          <button type="submit" class="button">Submit</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
